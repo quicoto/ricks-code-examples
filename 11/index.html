@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Example 11 | CodeGround</title>
+<meta charset="utf-8">
+<style>
+#rounded-example{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;    
+    background-color:#CCC;    
+    padding:20px;
+    font-size:14px;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 5px #888;
+    -moz-box-shadow:5px 5px 5px #888;
+    -webkit-box-shadow:5px 5px 5px #888;
+    width:300px;
+    
+    }
+</style>
+
+</head>
+  
+  <body>
+  
+  <div id="rounded-example">
+  This div can be rounded by you!<br><br>
+
+  Value: <span id="rounded-border-value"></span>
+  </div>
+  
+  <p><input type="range" onchange="changeRounded(event)" value="0" max="50" min="0" id="rounded-border"></p>
+  <script>
+     function changeRounded() {
+              var el = document.getElementById('rounded-example');
+
+              var borderVal = document.getElementById('rounded-border').value;
+              document.getElementById('rounded-border-value').innerHTML = borderVal;
+
+              el.style.borderRadius = borderVal + 'px';
+            }
+
+	</script>	
+
+	<div style="margin-top:20px; font-size:16px;"><a href="http://php.quicoto.com/?p=444">Go back and leave a comment!</a></div>
+
+  </body>  
+  
+</html>

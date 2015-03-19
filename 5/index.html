@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Anywhere Sample</title>
+	<script src="jQuery.js" type="text/javascript"></script>
+    <script src="http://platform.twitter.com/anywhere.js?id=2ypTx7wmSZ0p0mN13k3uuA&v=1" type="text/javascript"></script>
+  </head>
+  <body>
+  <script type="text/javascript">
+
+  twttr.anywhere(function (T) {
+    T.hovercards();
+  });
+
+</script>
+
+
+<span id="twitter-connect-placeholder"></span>
+<script type="text/javascript">
+
+  twttr.anywhere(function (T) {
+
+    var currentUser,
+        screenName,
+        profileImage,
+        profileImageTag;
+
+    if (T.isConnected()) {
+      currentUser = T.currentUser;
+      screenName = currentUser.data('screen_name');
+      profileImage = currentUser.data('profile_image_url');
+      profileImageTag = "<img src='" + profileImage + "'/>";
+      $('#twitter-connect-placeholder').append("Logged in as " + profileImageTag + " " + screenName);
+    } else {
+      T("#twitter-connect-placeholder").connectButton();
+    };
+
+  });
+
+</script>
+  
+
+
+
+  </body>
+</html>
+  

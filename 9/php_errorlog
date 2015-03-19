@@ -1,0 +1,8 @@
+[26-May-2010 05:58:10] PHP Parse error:  syntax error, unexpected '{' in /home/quicoto/public_html/php/examples/9/index.php on line 9
+[26-May-2010 05:58:25] PHP Parse error:  syntax error, unexpected '{' in /home/quicoto/public_html/php/examples/9/index.php on line 9
+[26-May-2010 05:58:37] PHP Fatal error:  Cannot redeclare demo() (previously declared in /home/quicoto/public_html/php/examples/9/index.php:2) in /home/quicoto/public_html/php/examples/9/index.php on line 13
+[26-May-2010 05:58:56] PHP Fatal error:  Cannot redeclare demo() (previously declared in /home/quicoto/public_html/php/examples/9/index.php:2) in /home/quicoto/public_html/php/examples/9/index.php on line 14
+[26-May-2010 05:58:58] PHP Fatal error:  Cannot redeclare demo() (previously declared in /home/quicoto/public_html/php/examples/9/index.php:2) in /home/quicoto/public_html/php/examples/9/index.php on line 14
+[26-May-2010 05:59:41] PHP Fatal error:  Cannot redeclare demo() (previously declared in /home/quicoto/public_html/php/examples/9/index.php:2) in /home/quicoto/public_html/php/examples/9/index.php on line 14
+[26-May-2010 06:00:25] PHP Fatal error:  Cannot redeclare demo() (previously declared in /home/quicoto/public_html/php/examples/9/index.php:2) in /home/quicoto/public_html/php/examples/9/index.php on line 13
+[26-May-2010 06:07:22] PHP Parse error:  syntax error, unexpected ')' in /home/quicoto/public_html/php/examples/9/index.php on line 14

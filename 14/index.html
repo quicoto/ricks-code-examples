@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Example 14 | CodeGround</title>
+<meta charset="utf-8">
+
+<style>
+	.container1{
+  		
+    	width:144px;
+     	height:152px;
+      	background-color:black;    
+	  
+    }
+    
+    .container2{
+  		
+    	width:144px;
+     	height:152px;
+      	background-image:url(background.jpg);    
+	  
+    }
+</style>
+
+</head>
+  
+<body>
+
+<h3>With Background color Black</h3>
+
+<div class="container container1">
+	<img src="http://www.quicoto.com/upload/files/2008/11/6341893.jpg" alt="" />
+</div>
+
+<h3>With Background Image</h3>
+
+<div class="container container2">
+	<img src="http://www.quicoto.com/upload/files/2008/11/6341893.jpg" alt="" />
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$(".container img").hover(
+			function() {
+				$(this).stop().animate({"opacity": "0.2"}, "slow");
+			},
+			function() {
+				$(this).stop().animate({"opacity": "1"}, "slow");
+			});		 
+	});
+</script>
+
+
+<div style="padding-top:100px;"><a href="/">go back and leave a comment</a></div>
+</body>
+
+</html>

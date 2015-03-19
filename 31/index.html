@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="author" href="http://google.com/+RicardTorres"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Example 31 - Rick's code</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+	<style>
+	
+	*{
+		-webkit-box-sizing: border-box; 
+		-moz-box-sizing: border-box;   
+		box-sizing: border-box;     
+	}
+
+	html{
+		font-size:16px;
+	}
+	strong{
+		font-weight: 600;
+	}
+	body{
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+	    background: #2ecc71;
+	    color: white;
+        overflow-y: scroll;
+        padding: 0 2em;
+	}
+        
+     h1, h2, h3, h4, h5{
+           font-weight: 300;
+     }
+
+     a{
+	   color: #2c3e50;
+	   text-decoration: none;
+     }
+     
+     .container:before{
+     	content: '';
+		height: 100%;
+		width: 100%;	     
+		position: absolute;
+		background: black;
+		display: block;
+		opacity: 0;
+     }
+     
+     .container:hover:before{
+	    opacity: 0.5;
+		 z-index: 10;
+     }
+     
+	 .container{
+	     position: relative;
+	     overflow: hidden;
+	     margin: 2em;
+	     float: left;
+     }
+     .container img, .container .text, .container:before{
+	   
+	  -webkit-transition: all 0.1s linear;
+	  transition: all 0.1s linear;
+     }
+     
+     .container.blur:hover img{
+	     filter: blur(2px); 
+	     -webkit-filter: blur(2px);
+     }
+     
+     .container:hover .text{
+	     opacity: 1;
+     }
+     
+      .container .text{
+	      position: absolute;
+	      z-index: 11;
+	      top: 0;
+	      padding: 2em;
+	      opacity: 0;
+		  font-weight: 300;
+      }
+      
+      h1{
+      	
+      	margin-left: 1em;
+      }
+                
+      h2{
+	    
+	     display: inline;
+    	  margin-left: 8em;
+      }
+      
+      .clear{
+	      clear: both;
+      }
+
+
+	 .back-to-article{
+		 clear: both;	
+		 text-align: center;
+
+	 }
+</style>
+</head>
+<body>
+
+<h1>Hover the cats</h1>
+
+	<h2>Left Cat: <strong>blur(2px)</strong></h2>
+	<h2>Right Cat: <strong>no blur</strong></h2>
+	
+	<div class="clear"></div>	
+
+	<div class="container blur">
+		<img src="http://php.quicoto.com/wp-content/uploads/2014/02/kitten-placeholder.jpeg" alt="kitten-placeholder" />
+		<div class="text">
+			This is a text inside. Hidden until we hover!
+			<hr />
+			<em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </em>
+		</div>
+	</div>
+	
+	<div class="container">
+		<img src="http://php.quicoto.com/wp-content/uploads/2014/02/kitten-placeholder.jpeg" alt="kitten-placeholder" />
+		<div class="text">
+			This is a text inside. Hidden until we hover the cat!
+			<hr />
+			<em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </em>
+		</div>
+	</div>
+
+	
+	<div class="back-to-article">
+		<a href="/add-css-blur-less-mixin/">&larr; Back to the article</a>
+	</div>
+	
+</body>
+</html>

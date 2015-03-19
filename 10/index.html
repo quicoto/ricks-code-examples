@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset=utf-8 /> 
+<title>Autofocus Example | CodeGround</title> 
+<body> 
+
+<form action="" method="">
+	<fieldset>
+	<legend>Form Name</legend>
+		<p>First Input: <input placeholder="write your e-mail" type="text" name="first" id="first" /></p>
+		<p>Second Input: <input type="text" name="second" id="second" autofocus /></p>
+		<script>
+ 		   if (!("autofocus" in document.createElement("input"))) {
+   			   document.getElementById("second").focus();
+  			}
+ 		</script>
+
+	</fieldset>
+	<p><input type="submit" /></p>
+</form>
+<br>
+<br>
+<a href="http://php.quicoto.com/?p=401">Back to the post</a>
+
+</body> 
+</head>
+</html> 

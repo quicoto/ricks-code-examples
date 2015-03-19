@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Example 25 | Rick's code</title>
+	<link rel="author" href="http://google.com/+RicardTorres"/>
+	<style>
+		
+		/* You don't acutally need any of this styles */
+		
+		html{
+			font-size:10px;
+		}
+		body{
+			font-size:2rem;
+			font-family: 'Lato', sans-serif;
+			font-size: 300;
+			-webkit-font-smoothing: antialiased;
+			background: #3498db;
+			color: white;
+			padding: 0 2em;
+		}
+		h1{
+			font-size: 2em;
+			font-weight: 300;
+		}
+		#drop{
+			width: 200px;
+			height: 200px;
+			border: 4px dashed white;
+			-webkit-box-sizing: border-box; 
+			-moz-box-sizing: border-box;   
+			box-sizing: border-box;     			
+			padding: 1em 1em 2em 1em;
+			overflow-y: hidden;
+		}
+		.dragable-item{
+			
+			width: 100px;
+			height: 100px;
+			background: #34495e;
+			margin: 1em;
+			text-align: center;		
+			-webkit-box-sizing: border-box; 
+			-moz-box-sizing: border-box;   
+			box-sizing: border-box;     
+			padding: 1em;
+			float: left;			
+		}
+		#total-costs{
+			padding: 1em 0 0 0;
+		}
+		a{
+			clear: both;
+			color: white;
+			text-decoration: none;
+			padding-top: 1em;
+			display: block;
+		}
+		a:hover{
+			color: #ecf0f1;
+		}
+		
+		*[draggable=true] {
+		  -moz-user-select:none;
+		  -khtml-user-drag: element;
+		  cursor: move;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Costs Calculator Demo App</h1>
+
+<div id="drop">
+	<div id="output"></div>
+</div>
+
+<div id="total-costs">
+	Total costs: <span></span>
+</div>
+
+<div draggable="true" class="dragable-item" data-title="Box 1" data-price="200">1</div>
+<div draggable="true" class="dragable-item" data-title="Box 2" data-price="250">2</div>
+<div draggable="true" class="dragable-item" data-title="Box 3" data-price="260">3</div>
+<div draggable="true" class="dragable-item" data-title="Box 4" data-price="270">4</div>
+
+<div style="clear:both;"></div>
+
+<a href="/html5-drag-drop-demo/">&larr; Go back to the article</a>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+// Callback function when cancelling the event
+function cancel(e) {
+  if (e.preventDefault) {
+    e.preventDefault();		
+  }
+  return false;
+}
+
+function refresh_total_costs(total_costs){
+	
+	$('#total-costs span').text(total_costs);
+}
+
+$(document).ready(function() {
+	
+		var total_costs = 0;
+		
+		refresh_total_costs(total_costs);
+		
+		// Get the #drop zone
+		var drop = document.getElementById('drop');
+		
+		var draggedItem = null;
+		
+		// Add the Event Listener to each draggable item		
+		$('.dragable-item').each(function(index){
+			$(this)[0].addEventListener('dragstart',function(e){
+				
+				draggedItem = jQuery(this);
+				
+				e.dataTransfer.setData('Text', this.id); // required otherwise doesn't work
+								
+			},false);
+		});
+	
+		drop.addEventListener('dragover', cancel);
+		drop.addEventListener('dragenter', cancel);
+		
+		drop.addEventListener('drop', function (e) {
+		  
+		   e.preventDefault();	
+		  
+		   // Let's play with the data attribute		   
+		   var html = $(draggedItem).data('title') + " costs " +  $(draggedItem).data('price') + "<br />";
+		   
+		   $('#output').prepend( html );
+		   
+		   total_costs += parseInt($(draggedItem).data('price'));
+		   
+		   refresh_total_costs(total_costs);
+		   
+		  return false;
+		});
+});
+			
+</script>
+</body>
+</html>
+

@@ -1,0 +1,4 @@
+[08-Apr-2010 02:35:11] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/quicoto/public_html/php/examples/3/language.es.php on line 3
+[08-Apr-2010 02:36:25] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/quicoto/public_html/php/examples/3/language.es.php on line 3
+[08-Apr-2010 02:36:27] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/quicoto/public_html/php/examples/3/language.es.php on line 3
+[08-Apr-2010 02:38:24] PHP Fatal error:  Function name must be a string in /home/quicoto/public_html/php/examples/3/index.php on line 5

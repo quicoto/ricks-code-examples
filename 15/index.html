@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 15 | CodeGround</title>
+</head>
+
+<body>
+
+<h1>Example 15 | CodeGround</h1>
+
+<p style="padding-top:20px;">Write something: <input type="text" name="my_text" id="my_text"></p>
+
+<p><a href="#" onClick="javascript: load_ajax();">Click here</a></p>
+
+<div id="container"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+function load_ajax(){
+		
+		var my_text = $('#my_text').val();
+	
+				
+		html = $.ajax({
+			data: "my_text="+my_text,
+			type: "POST",
+			url: "ajax.php",
+			async: false
+		 }).responseText;	
+		
+		$('#container').html(html);	
+	
+}	
+</script>
+
+<p style="margin-top:30px;"><a href="http://php.quicoto.com/?p=514">Go back and leave a Comment</a></p>
+
+</body>
+</html>

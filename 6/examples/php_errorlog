@@ -1,0 +1,18 @@
+[29-Apr-2010 12:18:32] OAuthException: Error processing access token.
+[29-Apr-2010 12:18:33] PHP Fatal error:  Uncaught OAuthException: Error processing access token.
+  thrown in /home/quicoto/public_html/php/examples/6/src/facebook.php on line 451
+[29-Apr-2010 12:18:38] OAuthException: Error processing access token.
+[29-Apr-2010 12:18:38] PHP Fatal error:  Uncaught OAuthException: Error processing access token.
+  thrown in /home/quicoto/public_html/php/examples/6/src/facebook.php on line 451
+[29-Apr-2010 12:18:41] OAuthException: Error processing access token.
+[29-Apr-2010 12:18:42] PHP Fatal error:  Uncaught OAuthException: Error processing access token.
+  thrown in /home/quicoto/public_html/php/examples/6/src/facebook.php on line 451
+[29-Apr-2010 12:19:09] OAuthException: Error processing access token.
+[29-Apr-2010 12:19:09] PHP Fatal error:  Uncaught OAuthException: Error processing access token.
+  thrown in /home/quicoto/public_html/php/examples/6/src/facebook.php on line 451
+[29-Apr-2010 12:19:18] OAuthException: Error processing access token.
+[29-Apr-2010 12:19:18] PHP Fatal error:  Uncaught OAuthException: Error processing access token.
+  thrown in /home/quicoto/public_html/php/examples/6/src/facebook.php on line 451
+[29-Apr-2010 12:19:29] OAuthException: Error processing access token.
+[29-Apr-2010 12:19:29] PHP Fatal error:  Uncaught OAuthException: Error processing access token.
+  thrown in /home/quicoto/public_html/php/examples/6/src/facebook.php on line 451

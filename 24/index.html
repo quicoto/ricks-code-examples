@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Example 24 | Rick's code</title>
+	<link rel="author" href="http://google.com/+RicardTorres"/>
+	<style>
+		/* General styles */
+		
+		html{
+			font-size:10px;
+		}
+		
+		body{
+			font-size:2rem;
+			background: #e74c3c;
+			font-family: 'Lato', sans-serif;
+			font-weight: 300;
+			text-align: center;
+			padding: 1em;
+		}
+		
+		a{
+			color: #ecf0f1;
+			text-decoration: none;
+		}
+		
+		a:hover{
+			color: #bdc3c7;
+		}
+		
+		div{
+			padding: 2em 0;
+		}
+		
+		/* Cool stuff starts here */		
+			
+		/* Keyframes for the animation */
+		
+		@keyframes rotation {
+		  from {
+		    transform: rotate(0deg);
+		  }
+		  to {
+		    transform: rotate(360deg);
+		  }
+		}
+		
+		@-webkit-keyframes rotation {
+		  from {
+		    -webkit-transform: rotate(0deg);
+		  }
+		  to {
+		    -webkit-transform: rotate(360deg);
+		  }
+		}
+		
+		@-moz-keyframes rotation {
+		  from {
+		    -moz-transform: rotate(0deg);
+		  }
+		  to {
+		    -moz-transform: rotate(360deg);
+		  }
+		}
+		
+		/* Styles for all the Spinners */
+		
+		.spinner {
+		  position: relative;
+		  display: inline-block;
+		  margin: 0 12.5% 100px;
+		  width: 120px;
+		  height: 120px;
+		  border: 2px solid #ecf0f1;
+		  border-radius: 50%;
+		  
+		  animation: rotation 0.75s infinite linear;
+		  -webkit-animation: rotation 0.75s infinite linear;
+		  -moz-animation: rotation 0.75s infinite linear;
+		  
+		}
+		.spinner::before, .spinner::after {
+		  left: -2px;
+		  top: -2px;
+		  display: none;
+		  position: absolute;
+		  content: '';
+		  width: inherit;
+		  height: inherit;
+		  border: inherit;
+		  border-radius: inherit;
+		}
+		
+				
+		/* Specific spinners */
+		
+		/* Spinner 1  */
+		
+		.spinner-1 {
+		  border-top-width: 0;
+		}
+		
+		/* Spinner 2  */
+		
+		.spinner-2 {
+		  border-top-color: transparent;
+		}
+		.spinner-2::after {
+		  display: block;
+		  left: -2px;
+		  top: -2px;
+		  border: inherit;
+		  transform: rotate(65deg);
+		  -webkit-transform: rotate(65deg);
+		  -moz-transform: rotate(65deg);
+		}
+		
+		
+		/* Spinner 3  */
+		
+		.spinner-3,
+		.spinner-3::before,
+		.spinner-3::after {
+		  display: inline-block;
+		  border-color: transparent;
+		  border-top-color: #ecf0f1;
+		  animation-duration: 1.2s;
+		  -webkit-animation-duration: 1.2s;
+		  -moz-animation-duration: 1.2s;
+		}
+		.spinner-3::before {
+		  transform: rotate(120deg);
+		  -webkit-transform: rotate(120deg);
+		  -moz-transform: rotate(120deg);
+		}
+		.spinner-3::after {
+		  transform: rotate(240deg);
+		  -webkit-transform: rotate(240deg);
+		  -moz-transform: rotate(240deg);
+		}
+		
+	</style>
+</head>
+<body>
+
+	<span class="spinner spinner-1"></span>
+	<span class="spinner spinner-2"></span>	
+	<span class="spinner spinner-3"></span>
+	
+	
+	<div>
+		<a href="/pure-css-spinner/">&larr; Go back to the article</a>
+	</div>
+
+</body>
+</html>

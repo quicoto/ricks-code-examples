@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CodeGround | Example 13</title>
+<meta charset="utf-8">
+</head>
+  
+<body>
+
+<div id="box">
+
+	<div id="container">
+		<div class="box" id="box1">
+		<p>Username<input type='text' size='20'></p>
+		<p>Password<input type='text' size='20'></p>
+		<p><input type='button' value='Submit' id='send'/></p>
+		</div>
+	</div>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script>
+$(function() {
+  var interval = 10;
+  var duration= 1000;
+  var shake= 3;
+  var vibrateIndex = 0;
+  var selector = $('#box'); /* Your own container ID*/
+	$('#send').click( /* The button ID */
+	
+	function(){	
+
+	vibrateIndex = setInterval(vibrate, interval);
+	setTimeout(stopVibration, duration);
+	
+	});
+
+	var vibrate = function(){
+	$(selector).stop(true,false)
+	.css({position: 'relative', 
+	left: Math.round(Math.random() * shake) - ((shake + 1) / 2) +'px', 
+	//top: Math.round(Math.random() * shake) - ((shake + 1) / 2) +'px'});
+	top:0});
+	}
+	
+	var stopVibration = function() {
+	clearInterval(vibrateIndex);
+	$(selector).stop(true,false)
+		.css({position: 'static', left: '0px', top: '0px'});
+	};
+
+});
+
+</script>
+
+<div style="margin-top:100px;"><a href="http://php.quicoto.com/?p=455" style="color:#03F;">Go back to CodeGround</a></div>
+
+</body>  
+</html>

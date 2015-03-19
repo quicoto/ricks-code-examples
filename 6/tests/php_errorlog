@@ -1,0 +1,3 @@
+[29-Apr-2010 02:58:31] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'facebook.php' (include_path='.:/usr/local/php52/pear') in /home/quicoto/public_html/php/examples/6/tests/tests.php on line 3
+[29-Apr-2010 03:00:49] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/quicoto/public_html/php/examples/6/tests/tests.php on line 10
+[28-Jul-2011 14:09:05] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/quicoto/public_html/php/examples/6/tests/tests.php on line 10

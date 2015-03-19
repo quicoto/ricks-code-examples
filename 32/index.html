@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Menu Hover Effect Inspiration - Rick's code</title>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    ::selection {
+
+      background: #3498db;
+      color: white;
+      text-shadow: none;
+
+    }
+    html {
+      font-size: 16px;
+    }
+    body {
+      margin: 50px;
+      font-size: 1rem;
+      font-weight: 300;
+      font-family: 'Open Sans', sans-serif;
+      background: #3498db;
+      color: white;
+      overflow-y: scroll;
+
+    }
+    .back-to-article{
+      margin-top: 60px;
+ clear: both;	
+		 text-align: center;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+
+    }
+    #special-nav li {
+      display: inline-block;
+      margin-right: 20px;
+      font-size: 20px;
+      font-family: sans-serif;
+      position: relative;
+    }
+    #special-nav li:after {
+      content: '';
+      position: absolute;
+      background: white;
+      width: 20%;
+      height: 2px;
+      left: 50%;
+      bottom: -10px;
+      opacity: 0;
+      transition: all linear 0.3s;
+    }
+    #special-nav li:hover:after {
+      opacity: 1;
+      width: 100%;
+      left: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav id="special-nav">
+      <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="back-to-article">
+    <a href="/menu-hover-effect-inspiration/">&larr; Back to the article</a>
+  </div>
+
+</body>
+</html>
+

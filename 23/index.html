@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Example 23 | Rick's code</title>
+	<link rel="author" href="http://google.com/+RicardTorres"/>
+	<style>
+	
+		/* General styles */
+		
+		html{
+			font-size:10px;
+		}
+		
+		body{
+			font-size:2rem;
+			background: #3498db;
+			font-family: 'Lato', sans-serif;
+			font-weight: 300;
+			text-align: center;
+			padding: 1em;
+		}
+				
+		.fa{
+			color: #2c3e50;
+		}		
+		
+		a, a .fa{
+			color: #ecf0f1;
+			text-decoration: none;
+		}
+		
+		a:hover{
+			color: #bdc3c7;
+		}
+		
+		div{
+			padding: 2em 0;
+		}
+		
+		/* Important Stuff */
+		
+		@keyframes rotation {
+			0% {
+				transform: rotate(0);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		
+		@-webkit-keyframes rotation {
+			0% {
+				-webkit-transform: rotate(0);
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}		
+		
+		@-moz-keyframes rotation {
+			0% {
+				-moz-transform: rotate(0);
+			}
+			100% {
+				-moz-transform: rotate(360deg);
+			}
+		}
+
+		.fa-refresh{
+			font-size: 5em;
+			margin-right: 1em;
+			
+			
+			animation: rotation 2s infinite linear;
+			-webkit-animation: rotation 2s infinite linear;
+			-moz-animation: rotation 2s infinite linear;
+		}
+		
+		.fa-spinner{
+			font-size: 5em;
+			
+			animation: rotation 2s infinite steps(8);
+			-webkit-animation: rotation 2s infinite steps(8);
+			-moz-animation: rotation 2s infinite steps(8);
+		}
+	</style>
+	
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+
+	<i class="fa fa-refresh"></i>
+	
+	<i class="fa fa-spinner"></i>
+
+	
+	<div id="">
+		<a href="/css-spinners-font-icons/"><i class="fa fa-long-arrow-left"></i> Go back to the article</a>
+	</div>
+
+</body>
+</html>

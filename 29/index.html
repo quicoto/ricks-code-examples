@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="author" href="http://google.com/+RicardTorres"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Example 29 - Rick's code</title>
+	<style>
+
+	html{
+		font-size:16px;
+	}
+	body{
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+	    background: #3498db;
+	    color: white;
+	    margin: 2em;
+	}
+        
+     h1, h2, h3, h4, h5{
+           font-weight: 300;
+     }
+
+     a{
+	   color: #2c3e50;
+	   text-decoration: none;
+     }
+     
+     .back-to-article{
+	     margin-top:2em;
+     }
+   
+	.back-to-article a{
+		color: white;
+		text-decoration: none;
+		padding: 1em 0;
+	}
+	
+	.button{
+	
+		-webkit-box-sizing: border-box; 
+		-moz-box-sizing: border-box;   
+		box-sizing: border-box;     
+		padding: 0.5em 1em;
+		margin: 0.5em;
+		background: #2980b9;
+		cursor: pointer;
+		display: inline-block;
+		
+	}
+	
+	/* This is the important part */
+	
+	
+	:-webkit-full-screen {
+	  background: #3498db;
+	}
+	
+	:-moz-full-screen {
+	  background: #3498db;
+	}
+	
+	:-ms-fullscreen {
+	  background: #3498db;
+	}
+	
+	:full-screen {
+	  background: #3498db;
+	}
+	
+	:fullscreen {
+	  background: #3498db;
+	}
+
+</style>
+</head>
+<body>
+
+<h1>Fullscreen API Example</h1>
+
+<span class="button" onclick="do_fullscreen(document.documentElement);">Turn on Full Screen</span>
+<span class="button" onclick="undo_fullscreen();">Turn off Full Screen</span>
+	
+<div class="back-to-article">
+	<a href="/javascript-fullscreen-api/">&larr; Back to the article</a>
+</div>
+
+
+<script>
+
+function do_fullscreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if(element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+}
+
+
+function undo_fullscreen() {
+  if(document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if(document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if(document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  }
+}
+	
+</script>
+
+</body>
+</html>
