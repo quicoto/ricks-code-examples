@@ -5,12 +5,12 @@
 	<title>CSS 3D flip - Rick's code</title>
 	<link rel="author" href="http://google.com/+RicardTorres"/>
 	<style>
-	
+
 		/* General Styles */
 		html{
 			font-size:10px;
 		}
-		
+
 		body{
 			font-size:2rem;
 			font-weight: 300;
@@ -18,54 +18,54 @@
 			background: #2ecc71;
 			color: #2c3e50;
 		}
-		
+
 		a{
 			color: #2c3e50;
 			text-decoration: none;
 		}
-		
+
 		/* Importan Part */
-		
+
 		.card{
-		
+
 			width: 200px;
 			height: 200px;
 			float: left;
 			margin: 0.5em;
-					
-		}		
-		
+
+		}
+
 		.card .front, .card .back{
 			position: absolute;
-		
+
 		    -webkit-backface-visibility: hidden;
 		       -moz-backface-visibility: hidden;
 		         -o-backface-visibility: hidden;
-		            backface-visibility: hidden;		
-			 
+		            backface-visibility: hidden;
+
 			transition: transform 0.3s linear 0s;
 			-webkit-transition: -webkit-transform 0.3s linear 0s;
-				
+
 		    transform: perspective(600px);
 		    -webkit-transform: perspective(600px);
-			
+
 			width: 200px;
 			height: 200px;
 		}
-		
+
 		.card .back{
-		
+
 			transform: rotateY(180deg);
 			-webkit-transform: rotateY(180deg);
 			background: #27ae60;
 			text-align: center;
 		}
-		
+
 		.card:hover .front{
 			transform: rotateY(180deg);
 			-webkit-transform: rotateY(180deg);
 		}
-		
+
 		.card:hover .back{
 			transform: rotateY(0);
 			-webkit-transform: rotateY(0);
@@ -76,25 +76,25 @@
 <body>
 
 	<div class="card">
-		<div class="front">			
+		<div class="front">
 			<img src="cat1.jpeg" alt="" />
 		</div>
 		<div class="back">
 			Miau!
 		</div>
 	</div>
-	
+
 	<div class="card">
-		<div class="front">			
+		<div class="front">
 			<img src="cat2.jpeg" alt="" />
 		</div>
 		<div class="back">
 			More miau!
 		</div>
 	</div>
-	
+
 	<div class="card">
-		<div class="front">			
+		<div class="front">
 			<img src="cat3.jpeg" alt="" />
 		</div>
 		<div class="back">
@@ -102,9 +102,10 @@
 		</div>
 	</div>
 
+	<p style="clear: both; ">
+		<a href="/css-3d-card-flip/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/26">Fork me on Github</a>
+	</p>
 
-	<div style="clear: both; text-align: center;">
-		<a href="/css-3d-card-flip/">&larr; Go back to the article</a>
-	</div>
+
 </body>
 </html>

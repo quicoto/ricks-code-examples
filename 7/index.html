@@ -2,20 +2,20 @@
 <head>
   <title>Translate</title>
   <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript">  
-    google.load("language", "1");        
+  <script type="text/javascript">
+    google.load("language", "1");
   </script>
 </head>
 
 <body onload="tranlate()">
 <div id="text">
-	Hola amigos, hoy tenemos un ejemplo de traducir del español al ingles.
+	Hola amigos, hoy tenemos un ejemplo de traducir del espanol al ingles.
 </div>
-  <h3>Traducción:</h3>
+  <h3>Traduccion:</h3>
   <div id="result">
    <input type="button" onclick="translate();" Value="Clic me">
   </div>
-</body>
+
 <script type="text/javascript">
 function translate()
 {
@@ -25,16 +25,25 @@ function translate()
   var dstLang = "en"; //idioma al que sera traducido
 
   // llamada al traductor
-  google.language.translate(text, srcLang, dstLang, function(result) 
+  google.language.translate(text, srcLang, dstLang, function(result)
     {
-      if (!result.error) 
-      {    
-        var resultado = document.getElementById("result");    
-        resultado.innerHTML = result.translation;  
+      if (!result.error)
+      {
+        var resultado = document.getElementById("result");
+        resultado.innerHTML = result.translation;
       }
       else alert(result.error.message);
     }
   );
 }
 </script>
+
+
+<p>
+	<a href="https://github.com/quicoto/ricks-code-examples/tree/master/7">Fork me on Github</a>
+</p>
+
+
+</body>
+
 </html>

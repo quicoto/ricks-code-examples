@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Example 4 | Rick's Code</title>
+
+  <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <style>
+
+     *{
+  		-webkit-box-sizing: border-box;
+  		-moz-box-sizing: border-box;
+  		box-sizing: border-box;
+  	}
+
+  	::selection {
+  		background: #3498db;
+  		color: white;
+  		text-shadow: none;
+  	}
+
+
+  	html{
+  		font-size:16px;
+  	}
+  	body{
+  		font-size: 1rem;
+  		font-weight: 300;
+  		font-family: 'Open Sans', sans-serif;
+  	    background: #3498db;
+  	    color: white;
+          overflow-y: scroll;
+  	}
+
+       h1, h2, h3, h4, h5{
+             font-weight: 300;
+       }
+
+       a{
+  	    color: #2c3e50;
+       }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Simple List</h1>
+  </header>
+
+  <section>
+    <ul id="my_list" contenteditable="true">
+      <li></li>
+    </ul>
+  </section>
+
+  <p>Add some items and refresh the page.</p>
+
+  <p><button id="reset_it" name="reset_it" onClick="javascript:reset_me();" />Reset Local Storage</button></p>
+
+  <script type="text/javascript">
+
+$(function() {
+
+  var my_list = document.getElementById('my_list');
+
+  $(my_list).blur(function() {
+    localStorage.setItem('my_data', this.innerHTML);
+  });
+
+  // when the page loads
+  if ( localStorage.getItem('my_data') ) {
+    my_list.innerHTML = localStorage.getItem('my_data');
+  }
+
+
+});
+
+function reset_me(){
+ localStorage.clear();
+ document.location.reload(true);
+
+}
+</script>
+
+
+<p>
+  <a href="http://php.quicoto.com/html5-local-storage/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/4">Fork me on Github</a>
+</p>
+
+
+</body>
+</html>

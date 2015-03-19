@@ -21,3 +21,8 @@ $stream = $facebook->api_client->stream_get('',$page_id,'0','0',$cont+1,'','',''
 
 ?>
 </div>
+
+
+<p>
+	<a href="https://github.com/quicoto/ricks-code-examples/tree/master/2">Fork me on Github</a>
+</p>

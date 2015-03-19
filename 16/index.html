@@ -2,7 +2,47 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Example 16 | CodeGround</title>
+<title>Example 16 | Rick's Code</title>
+
+<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<style>
+
+   *{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	::selection {
+		background: #3498db;
+		color: white;
+		text-shadow: none;
+	}
+
+
+	html{
+		font-size:16px;
+	}
+	body{
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+	    background: #3498db;
+	    color: white;
+        overflow-y: scroll;
+	}
+
+     h1, h2, h3, h4, h5{
+           font-weight: 300;
+     }
+
+     a{
+	    color: #2c3e50;
+     }
+
+</style>
 
 </head>
 
@@ -16,19 +56,21 @@
 
 
 	 function my_effect() {
-	
+
 		$('.first').fadeOut('slow')
 		$('.first').fadeIn('slow')
-		
+
 		setInterval(my_effect(), 2000);
-	
+
 	  };
-	  
-	  my_effect();  
+
+	  my_effect();
 
 </script>
 
-<p style="margin-top:30px;"><a href="http://php.quicoto.com/?p=533">Go back and leave a Comment</a></p>
+<p>
+	<a href="http://php.quicoto.com/how-to-setinterval-effect-with-javascript/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/16">Fork me on Github</a>
+</p>
 
 </body>
 </html>

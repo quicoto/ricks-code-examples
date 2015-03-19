@@ -17,12 +17,12 @@
 	    color: white;
 	    margin: 2em;
 	}
-        
+
      h1, h2, h3, h4, h5{
           font-weight: 300;
           margin-bottom: 1.5em;
      }
-     
+
      .back-to-article{
 	     display: block;
 	     clear: both;
@@ -33,16 +33,16 @@
 	   color: white;
 	   text-decoration: none;
      }
-     
+
      .tabs span{
 	     background: #c0392b;
 	     padding: 0.5em 1em;
 	     margin: 0.5em;
 	     cursor: pointer;
      }
-     
+
 	 .content{
-		 
+
 		 display: none;
 		 padding: 1em 2em;
 		 background: #c0392b;
@@ -76,35 +76,35 @@
 
 <script>
 $(document).ready(function() {
-  
+
   $(".tabs span").on("click", function(event){
-  
+
   	// Hide all the containers
-  	
+
   		$('.content').hide();
-  		
+
   	// Get the data attribute from the button
-    
+
 	    var container = $(this).data('content');
-	    
+
 	// Show the selected container
-    
+
 	    $('#' + container).show();
-	    
+
     // Use Pushstate to change the URL
-    
+
     	var stateObj = {};
-    
+
    		history.pushState(stateObj, container, "#" + container);
-     
+
   });
 });
 </script>
 
 
-<div class="back-to-article">
-	<a href="/browser-history-with-pushstate/">&larr; Back to the article</a>
-</div>
+<p style="clear: both;">
+	<a href="http://php.quicoto.com/browser-history-with-pushstate/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/30">Fork me on Github</a>
+</p>
 
 </body>
 </html>

@@ -7,11 +7,11 @@
 	<link rel="author" href="http://google.com/+RicardTorres"/>
 	<style>
 		/* General styles */
-		
+
 		html{
 			font-size:10px;
 		}
-		
+
 		body{
 			font-size:2rem;
 			background: #e74c3c;
@@ -20,24 +20,24 @@
 			text-align: center;
 			padding: 1em;
 		}
-		
+
 		a{
 			color: #ecf0f1;
 			text-decoration: none;
 		}
-		
+
 		a:hover{
 			color: #bdc3c7;
 		}
-		
+
 		div{
 			padding: 2em 0;
 		}
-		
-		/* Cool stuff starts here */		
-			
+
+		/* Cool stuff starts here */
+
 		/* Keyframes for the animation */
-		
+
 		@keyframes rotation {
 		  from {
 		    transform: rotate(0deg);
@@ -46,7 +46,7 @@
 		    transform: rotate(360deg);
 		  }
 		}
-		
+
 		@-webkit-keyframes rotation {
 		  from {
 		    -webkit-transform: rotate(0deg);
@@ -55,7 +55,7 @@
 		    -webkit-transform: rotate(360deg);
 		  }
 		}
-		
+
 		@-moz-keyframes rotation {
 		  from {
 		    -moz-transform: rotate(0deg);
@@ -64,9 +64,9 @@
 		    -moz-transform: rotate(360deg);
 		  }
 		}
-		
+
 		/* Styles for all the Spinners */
-		
+
 		.spinner {
 		  position: relative;
 		  display: inline-block;
@@ -75,11 +75,11 @@
 		  height: 120px;
 		  border: 2px solid #ecf0f1;
 		  border-radius: 50%;
-		  
+
 		  animation: rotation 0.75s infinite linear;
 		  -webkit-animation: rotation 0.75s infinite linear;
 		  -moz-animation: rotation 0.75s infinite linear;
-		  
+
 		}
 		.spinner::before, .spinner::after {
 		  left: -2px;
@@ -92,18 +92,18 @@
 		  border: inherit;
 		  border-radius: inherit;
 		}
-		
-				
+
+
 		/* Specific spinners */
-		
+
 		/* Spinner 1  */
-		
+
 		.spinner-1 {
 		  border-top-width: 0;
 		}
-		
+
 		/* Spinner 2  */
-		
+
 		.spinner-2 {
 		  border-top-color: transparent;
 		}
@@ -116,10 +116,10 @@
 		  -webkit-transform: rotate(65deg);
 		  -moz-transform: rotate(65deg);
 		}
-		
-		
+
+
 		/* Spinner 3  */
-		
+
 		.spinner-3,
 		.spinner-3::before,
 		.spinner-3::after {
@@ -140,19 +140,18 @@
 		  -webkit-transform: rotate(240deg);
 		  -moz-transform: rotate(240deg);
 		}
-		
+
 	</style>
 </head>
 <body>
 
 	<span class="spinner spinner-1"></span>
-	<span class="spinner spinner-2"></span>	
+	<span class="spinner spinner-2"></span>
 	<span class="spinner spinner-3"></span>
-	
-	
-	<div>
-		<a href="/pure-css-spinner/">&larr; Go back to the article</a>
-	</div>
+
+	<p>
+		<a href="http://php.quicoto.com/pure-css-spinner/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/24">Fork me on Github</a>
+	</p>
 
 </body>
 </html>

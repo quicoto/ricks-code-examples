@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CodeGround | Example 13</title>
+<title>Example 13 - Rick's Code</title>
 <meta charset="utf-8">
+
+<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<style>
+
+   *{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	::selection {
+		background: #3498db;
+		color: white;
+		text-shadow: none;
+	}
+
+
+	html{
+		font-size:16px;
+	}
+	body{
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+	    background: #3498db;
+	    color: white;
+        overflow-y: scroll;
+	}
+
+     h1, h2, h3, h4, h5{
+           font-weight: 300;
+     }
+
+     a{
+	   color: #2c3e50;
+	   text-decoration: none;
+     }
+
+</style>
+
 </head>
-  
+
 <body>
 
 <div id="box">
@@ -29,22 +71,22 @@ $(function() {
   var vibrateIndex = 0;
   var selector = $('#box'); /* Your own container ID*/
 	$('#send').click( /* The button ID */
-	
-	function(){	
+
+	function(){
 
 	vibrateIndex = setInterval(vibrate, interval);
 	setTimeout(stopVibration, duration);
-	
+
 	});
 
 	var vibrate = function(){
 	$(selector).stop(true,false)
-	.css({position: 'relative', 
-	left: Math.round(Math.random() * shake) - ((shake + 1) / 2) +'px', 
+	.css({position: 'relative',
+	left: Math.round(Math.random() * shake) - ((shake + 1) / 2) +'px',
 	//top: Math.round(Math.random() * shake) - ((shake + 1) / 2) +'px'});
 	top:0});
 	}
-	
+
 	var stopVibration = function() {
 	clearInterval(vibrateIndex);
 	$(selector).stop(true,false)
@@ -55,7 +97,9 @@ $(function() {
 
 </script>
 
-<div style="margin-top:100px;"><a href="http://php.quicoto.com/?p=455" style="color:#03F;">Go back to CodeGround</a></div>
+<p>
+	<a href="http://php.quicoto.com/css3-transitions-and-transforms-examples/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/13">Fork me on Github</a>
+</p>
 
-</body>  
+</body>
 </html>

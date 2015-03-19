@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Example 12 | CodeGround</title>
+<title>Example 12 | Rick's Code</title>
 <meta charset="utf-8">
 <style>
 
    /* Example 1 */
-   
-   a{   
+
+   a{
        text-decoration:none;
-       color:#000;  
-       -webkit-transition:color 1s ease-in;  
-    }  
-    
-   a:hover{color:#06F;}  
+       color:#000;
+       -webkit-transition:color 1s ease-in;
+    }
+
+   a:hover{color:#06F;}
 
    /* Example 2*/
-   
+
    #box{
      margin:30px;
    	 width:200px;
      height:100px;
-     background-color:#930; 
+     background-color:#930;
      color:#FFF;
    }
-      
-   #box:hover{  
-   
-       background:#CCC;  
-       -webkit-transition:background-color 0.5s linear;    
-   
-   }  
-   
+
+   #box:hover{
+
+       background:#CCC;
+       -webkit-transition:background-color 0.5s linear;
+
+   }
+
    /* Example 3*/
-   
+
      #avatar{margin-top:120px;}
-     #avatar #photo{            
+     #avatar #photo{
             position:absolute;
             top:10;
             left:60;
@@ -48,10 +48,10 @@
         #avatar:hover #photo{
             -webkit-transform:rotate(0deg);
         }
-        
+
     /* example 4 */
     #more{margin-top:200px;}
-    #more #photo2{            
+    #more #photo2{
             position:absolute;
             top:10;
             left:60;
@@ -64,34 +64,73 @@
      #more:hover #photo2{
             -webkit-transform:rotate(90deg);
         }
-           
+
    /* Extra styles */
-   
+
    .size{font-size:20px;}
+
+
+      *{
+   		-webkit-box-sizing: border-box;
+   		-moz-box-sizing: border-box;
+   		box-sizing: border-box;
+   	}
+
+   	::selection {
+   		background: #3498db;
+   		color: white;
+   		text-shadow: none;
+   	}
+
+
+   	html{
+   		font-size:16px;
+   	}
+   	body{
+   		font-size: 1rem;
+   		font-weight: 300;
+   		font-family: 'Open Sans', sans-serif;
+   	    background: #3498db;
+   	    color: white;
+           overflow-y: scroll;
+   	}
+
+        h1, h2, h3, h4, h5{
+              font-weight: 300;
+        }
+
+        a{
+   	   color: #2c3e50;
+   	   text-decoration: none;
+        }
+
 </style>
 </head>
-  
+
   <body>
-  
+
   <h1>CSS3 Transitions</h1>
-  
+
   <h3>(This example only will work on Google Chrome and Safari)</h3>
-  
+
   <div class="size">1) <a href="#">Roll over me!</a></div>
-  
+
   <div id="box">2) Come here</div>
-  
+
   <div id="avatar">
     3) Touch the image	<img id="photo" src="http://php.quicoto.com/wp-content/uploads/2012/05/codeground.jpg">
    </div>
-   
+
    <div id="more">
     4) More transform <img id="photo2" src="http://php.quicoto.com/wp-content/uploads/2012/05/codeground.jpg">
    </div>
-   
-   <div style="margin-top:100px;"><a href="http://php.quicoto.com/css3-transitions-and-transforms-examples/" style="color:#03F;">Go back to CodeGround and leave a comment</a></div>
-  
-  
+
+
+   <p>
+   	<a href="http://php.quicoto.com/css3-transitions-and-transforms-examples/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/12">Fork me on Github</a>
+   </p>
+
+
   </body>
-  
+
 </html>

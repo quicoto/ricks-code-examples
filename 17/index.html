@@ -4,30 +4,49 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Example 17 | Rick's code</title>
 <link rel="author" href="http://google.com/+RicardTorres"/>
-<style type="text/css" media="screen">
-	body{
-		background: #a90329;
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2E5MDMyOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iIzhmMDIyMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ZDAwMTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top, #a90329 0%, #8f0222 33%, #6d0019 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(33%,#8f0222), color-stop(100%,#6d0019));
-background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 33%,#6d0019 100%);
-background: -o-linear-gradient(top, #a90329 0%,#8f0222 33%,#6d0019 100%);
-background: -ms-linear-gradient(top, #a90329 0%,#8f0222 33%,#6d0019 100%);
-background: linear-gradient(to bottom, #a90329 0%,#8f0222 33%,#6d0019 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<style>
+
+   *{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
-</style>
-</head>
+
+	::selection {
+		background: #3498db;
+		color: white;
+		text-shadow: none;
+	}
+
+
+	html{
+		font-size:16px;
+	}
+	body{
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+	    background: #3498db;
+	    color: white;
+        overflow-y: scroll;
+	}
+
+     h1, h2, h3, h4, h5{
+           font-weight: 300;
+     }
+
+     a{
+	    color: #2c3e50;
+     }
+
+</style></head>
 
 <body>
 
 <div style="padding:30px;"><a href="#CodeGround">Click me to scroll down!</a><br /><br /><br /><br />
-	
-	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br /><br />
-
-It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <br /><br />
-
-It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br /><br />
 
 	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br /><br />
 
@@ -95,7 +114,13 @@ It has survived not only five centuries, but also the leap into electronic types
 
 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br /><br />
 
- 
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br /><br />
+
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <br /><br />
+
+It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br /><br />
+
+
  </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
@@ -105,31 +130,35 @@ It was popularised in the 1960s with the release of Letraset sheets containing L
 			$(function(){
 
 				$('a[href*=#]').click(function() {
-				
-				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 					&& location.hostname == this.hostname) {
-					
+
 						var $target = $(this.hash);
-						
+
 						$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-						
+
 						if ($target.length) {
-						
+
 							var targetOffset = $target.offset().top;
-							
+
 							$('html,body').animate({scrollTop: targetOffset}, 2000);
-								
+
 							return false;
-							
+
 						}
-						
+
 					}
-					
-				});				
+
+				});
 			});
 </script>
+
 <a name="CodeGround"></a>
-<p style="margin:30px 0px 50px 30px;"><a href="http://php.quicoto.com/how-to-scroll-smoothly-with-jquery">Go back and leave a Comment</a></p>
+
+<p>
+	<a href="http://php.quicoto.com/how-to-scroll-smoothly-with-jquery">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/17">Fork me on Github</a>
+</p>
 
 </body>
 </html>

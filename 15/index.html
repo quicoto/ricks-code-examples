@@ -2,12 +2,51 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Example 15 | CodeGround</title>
+<title>Example 15 | Rick's Code</title>
+<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<style>
+
+   *{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	::selection {
+		background: #3498db;
+		color: white;
+		text-shadow: none;
+	}
+
+
+	html{
+		font-size:16px;
+	}
+	body{
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+	    background: #3498db;
+	    color: white;
+        overflow-y: scroll;
+	}
+
+     h1, h2, h3, h4, h5{
+           font-weight: 300;
+     }
+
+     a{
+	    color: #2c3e50;
+     }
+
+</style>
 </head>
 
 <body>
 
-<h1>Example 15 | CodeGround</h1>
+<h1>Example 15 | Rick's Code</h1>
 
 <p style="padding-top:20px;">Write something: <input type="text" name="my_text" id="my_text"></p>
 
@@ -18,23 +57,25 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script>
 function load_ajax(){
-		
+
 		var my_text = $('#my_text').val();
-	
-				
+
+
 		html = $.ajax({
 			data: "my_text="+my_text,
 			type: "POST",
 			url: "ajax.php",
 			async: false
-		 }).responseText;	
-		
-		$('#container').html(html);	
-	
-}	
+		 }).responseText;
+
+		$('#container').html(html);
+
+}
 </script>
 
-<p style="margin-top:30px;"><a href="http://php.quicoto.com/?p=514">Go back and leave a Comment</a></p>
+<p>
+	<a href="http://php.quicoto.com/how-to-build-a-simple-ajax/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/15">Fork me on Github</a>
+</p>
 
 </body>
 </html>

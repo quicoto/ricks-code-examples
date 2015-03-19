@@ -1,29 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Example 14 | CodeGround</title>
+<title>Example 14 | Rick's Code</title>
 <meta charset="utf-8">
+
+
+		<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <style>
 	.container1{
-  		
+
     	width:144px;
      	height:152px;
-      	background-color:black;    
-	  
+      	background-color:black;
+
     }
-    
+
     .container2{
-  		
+
     	width:144px;
      	height:152px;
-      	background-image:url(background.jpg);    
-	  
+      	background-image:url(background.jpg);
+
     }
+
+
+		/* Other Styling */
+
+
+		   *{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			::selection {
+				background: #3498db;
+				color: white;
+				text-shadow: none;
+			}
+
+
+			html{
+				font-size:16px;
+			}
+			body{
+				font-size: 1rem;
+				font-weight: 300;
+				font-family: 'Open Sans', sans-serif;
+			    background: #3498db;
+			    color: white;
+		        overflow-y: scroll;
+			}
+
+		     h1, h2, h3, h4, h5{
+		           font-weight: 300;
+		     }
+
+		     a{
+			   color: #2c3e50;
+			   text-decoration: none;
+		     }
+
 </style>
 
 </head>
-  
+
 <body>
 
 <h3>With Background color Black</h3>
@@ -48,12 +91,16 @@
 			},
 			function() {
 				$(this).stop().animate({"opacity": "1"}, "slow");
-			});		 
+			});
 	});
 </script>
 
 
-<div style="padding-top:100px;"><a href="/">go back and leave a comment</a></div>
+<p>
+	<a href="http://php.quicoto.com/how-to-change-opacity-with-jquery/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/14">Fork me on Github</a>
+</p>
+
+
 </body>
 
 </html>

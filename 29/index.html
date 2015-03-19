@@ -17,7 +17,7 @@
 	    color: white;
 	    margin: 2em;
 	}
-        
+
      h1, h2, h3, h4, h5{
            font-weight: 300;
      }
@@ -26,49 +26,49 @@
 	   color: #2c3e50;
 	   text-decoration: none;
      }
-     
+
      .back-to-article{
 	     margin-top:2em;
      }
-   
+
 	.back-to-article a{
 		color: white;
 		text-decoration: none;
 		padding: 1em 0;
 	}
-	
+
 	.button{
-	
-		-webkit-box-sizing: border-box; 
-		-moz-box-sizing: border-box;   
-		box-sizing: border-box;     
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 		padding: 0.5em 1em;
 		margin: 0.5em;
 		background: #2980b9;
 		cursor: pointer;
 		display: inline-block;
-		
+
 	}
-	
+
 	/* This is the important part */
-	
-	
+
+
 	:-webkit-full-screen {
 	  background: #3498db;
 	}
-	
+
 	:-moz-full-screen {
 	  background: #3498db;
 	}
-	
+
 	:-ms-fullscreen {
 	  background: #3498db;
 	}
-	
+
 	:full-screen {
 	  background: #3498db;
 	}
-	
+
 	:fullscreen {
 	  background: #3498db;
 	}
@@ -81,11 +81,6 @@
 
 <span class="button" onclick="do_fullscreen(document.documentElement);">Turn on Full Screen</span>
 <span class="button" onclick="undo_fullscreen();">Turn off Full Screen</span>
-	
-<div class="back-to-article">
-	<a href="/javascript-fullscreen-api/">&larr; Back to the article</a>
-</div>
-
 
 <script>
 
@@ -111,8 +106,14 @@ function undo_fullscreen() {
     document.webkitExitFullscreen();
   }
 }
-	
+
 </script>
+
+
+<p class="back-to-article">
+	<a href="http://php.quicoto.com//javascript-fullscreen-api/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/10">Fork me on Github</a>
+</p>
+
 
 </body>
 </html>

@@ -6,9 +6,9 @@
 	<title>Example 25 | Rick's code</title>
 	<link rel="author" href="http://google.com/+RicardTorres"/>
 	<style>
-		
+
 		/* You don't acutally need any of this styles */
-		
+
 		html{
 			font-size:10px;
 		}
@@ -29,24 +29,24 @@
 			width: 200px;
 			height: 200px;
 			border: 4px dashed white;
-			-webkit-box-sizing: border-box; 
-			-moz-box-sizing: border-box;   
-			box-sizing: border-box;     			
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
 			padding: 1em 1em 2em 1em;
 			overflow-y: hidden;
 		}
 		.dragable-item{
-			
+
 			width: 100px;
 			height: 100px;
 			background: #34495e;
 			margin: 1em;
-			text-align: center;		
-			-webkit-box-sizing: border-box; 
-			-moz-box-sizing: border-box;   
-			box-sizing: border-box;     
+			text-align: center;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
 			padding: 1em;
-			float: left;			
+			float: left;
 		}
 		#total-costs{
 			padding: 1em 0 0 0;
@@ -61,7 +61,7 @@
 		a:hover{
 			color: #ecf0f1;
 		}
-		
+
 		*[draggable=true] {
 		  -moz-user-select:none;
 		  -khtml-user-drag: element;
@@ -88,66 +88,70 @@
 
 <div style="clear:both;"></div>
 
-<a href="/html5-drag-drop-demo/">&larr; Go back to the article</a>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
 // Callback function when cancelling the event
 function cancel(e) {
   if (e.preventDefault) {
-    e.preventDefault();		
+    e.preventDefault();
   }
   return false;
 }
 
 function refresh_total_costs(total_costs){
-	
+
 	$('#total-costs span').text(total_costs);
 }
 
 $(document).ready(function() {
-	
+
 		var total_costs = 0;
-		
+
 		refresh_total_costs(total_costs);
-		
+
 		// Get the #drop zone
 		var drop = document.getElementById('drop');
-		
+
 		var draggedItem = null;
-		
-		// Add the Event Listener to each draggable item		
+
+		// Add the Event Listener to each draggable item
 		$('.dragable-item').each(function(index){
 			$(this)[0].addEventListener('dragstart',function(e){
-				
+
 				draggedItem = jQuery(this);
-				
+
 				e.dataTransfer.setData('Text', this.id); // required otherwise doesn't work
-								
+
 			},false);
 		});
-	
+
 		drop.addEventListener('dragover', cancel);
 		drop.addEventListener('dragenter', cancel);
-		
+
 		drop.addEventListener('drop', function (e) {
-		  
-		   e.preventDefault();	
-		  
-		   // Let's play with the data attribute		   
+
+		   e.preventDefault();
+
+		   // Let's play with the data attribute
 		   var html = $(draggedItem).data('title') + " costs " +  $(draggedItem).data('price') + "<br />";
-		   
+
 		   $('#output').prepend( html );
-		   
+
 		   total_costs += parseInt($(draggedItem).data('price'));
-		   
+
 		   refresh_total_costs(total_costs);
-		   
+
 		  return false;
 		});
 });
-			
+
 </script>
+
+
+<p>
+	<a href="http://php.quicoto.com/html5-drag-drop-demo/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/25">Fork me on Github</a>
+</p>
+
 </body>
 </html>
-

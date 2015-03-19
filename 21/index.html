@@ -3,47 +3,91 @@
         <meta charset="utf-8">
         <title>Demo: Simple jQuery Tooltip | Rick's code</title>
         <link rel="author" href="http://google.com/+RicardTorres"/>
-        
+
         <style>
-        
+
         	body{ margin:50px; font-size:20px; font-family: 'Trebuchet MS', Verdana, Arial;}
-        
+
         	.tooltip {
 				display: none;
 				position: absolute;
 				padding: 10px;
 				color: black;
 				background-color: red;
-				border: 1px solid black; 
+				border: 1px solid black;
 				box-shadow: 0 1px 3px 1px rgba(0,0,0,0.5);
 				border-radius: 3px;
 		     }
-        	
+
+        </style>
+
+        <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <style>
+
+           *{
+        		-webkit-box-sizing: border-box;
+        		-moz-box-sizing: border-box;
+        		box-sizing: border-box;
+        	}
+
+        	::selection {
+        		background: #3498db;
+        		color: white;
+        		text-shadow: none;
+        	}
+
+
+        	html{
+        		font-size:16px;
+        	}
+        	body{
+        		font-size: 1rem;
+        		font-weight: 300;
+        		font-family: 'Open Sans', sans-serif;
+        	    background: #3498db;
+        	    color: white;
+                overflow-y: scroll;
+        	}
+
+             h1, h2, h3, h4, h5{
+                   font-weight: 300;
+             }
+
+             a{
+        	    color: #2c3e50;
+             }
+
         </style>
     </head>
     <body>
-      
-       <a title="This is the tooltip content">Hover me!</a>
-          
+
+       <a title="This is the tooltip content" class="link">Hover me!</a>
+
        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-      
+
        <script>
-       
+
        	$(document).ready(function(){
-		     $('a').hover(function(e){ 
+		     $('a.link').hover(function(e){
 		          var titleText = $(this).attr('title');
 		          $(this).data('tiptext', titleText).removeAttr('title');
 		          $('<p class="tooltip"></p>').text(titleText).appendTo('body').css('top', (e.pageY - 10) + 'px').css('left', (e.pageX + 20) + 'px').fadeIn('slow');
-		     }, function(){ 
+		     }, function(){
 		          $(this).attr('title', $(this).data('tiptext'));
 		          $('.tooltip').remove();
-		     }).mousemove(function(e){ 
+		     }).mousemove(function(e){
 		          $('.tooltip').css('top', (e.pageY - 10) + 'px').css('left', (e.pageX + 20) + 'px');
 		     });
 		});
-      
+
        </script>
-       
-       <div style="margin-top:150px;"><a  href="http://php.quicoto.com/simple-jquery-tooltip/">Back to the post</a></div>
+
+
+
+       <p>
+       	<a href="http://php.quicoto.com/simple-jquery-tooltip/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/21">Fork me on Github</a>
+       </p>
     </body>
 </html>

@@ -1,44 +1,87 @@
-<html> 
+<html>
 <title>Example 18 | Rick's code</title>
 <link rel="author" href="http://google.com/+RicardTorres"/>
-<head> 
-  <title>CSS animations: Example 1</title> 
-  <style type="text/css"> 
+<head>
+  <title>CSS animations: Example 1</title>
+  <style type="text/css">
     h1 {
       -moz-animation-duration: 3s;
       -webkit-animation-duration: 3s;
       -moz-animation-name: slidein;
       -webkit-animation-name: slidein;
     }
- 
+
     @-moz-keyframes slidein {
       from {
         margin-left:100%;
         width:300%
       }
-      
+
       to {
         margin-left:0%;
         width:100%;
       }
     }
-    
+
     @-webkit-keyframes slidein {
       from {
         margin-left:100%;
         width:300%
       }
-      
+
       to {
         margin-left:0%;
         width:100%;
       }
     }
-  </style> 
-</head> 
-<body> 
+  </style>
+
+  <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <style>
+
+     *{
+  		-webkit-box-sizing: border-box;
+  		-moz-box-sizing: border-box;
+  		box-sizing: border-box;
+  	}
+
+  	::selection {
+  		background: #3498db;
+  		color: white;
+  		text-shadow: none;
+  	}
+
+
+  	html{
+  		font-size:16px;
+  	}
+  	body{
+  		font-size: 1rem;
+  		font-weight: 300;
+  		font-family: 'Open Sans', sans-serif;
+  	    background: #3498db;
+  	    color: white;
+          overflow-y: scroll;
+  	}
+
+       h1, h2, h3, h4, h5{
+             font-weight: 300;
+       }
+
+       a{
+  	    color: #2c3e50;
+       }
+
+  </style>
+
+</head>
+<body>
   <h1>I'm comming from right</h1>
-  
-  <div style="padding-top:50px;"><a href="http://php.quicoto.com/css-animations-now-on-firefox/">Go back and leave a comment</a></div>
-</body> 
+
+  <p>
+  	<a href="http://php.quicoto.com/css-animations-now-on-firefox/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/18">Fork me on Github</a>
+  </p>
+</body>
 </html>

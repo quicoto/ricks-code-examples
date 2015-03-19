@@ -17,22 +17,22 @@
 	    color: white;
 	    padding: 2em;
 	}
-	
+
 	input{
 		height: 30px;
 		width: 250px;
 		font-size: 1em;
 	}
-	
+
 	div{
 		 text-align: center;
 	}
-	
+
 	div a{
 		color: white;
 		text-decoration: none;
 	}
- 
+
 </style>
 </head>
 <body>
@@ -44,7 +44,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
-$(document).ready(function () {    
+$(document).ready(function () {
     $('input').keyup(function() {
         var $th = $(this);
         $th.val( $th.val().replace(/[^a-zA-Z0-9]/g, function(){ return ''; }) );
@@ -53,9 +53,9 @@ $(document).ready(function () {
 </script>
 
 
-<div>
-	<a href="/validate-input-text-keyup-jquery">&larr; Back to the article</a>
-</div>
+<p>
+	<a href="http://php.quicoto.com//validate-input-text-keyup-jquery/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/28">Fork me on Github</a>
+</p>
 
 </body>
 </html>

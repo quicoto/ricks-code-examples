@@ -6,11 +6,11 @@
 	<title>Example 31 - Rick's code</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
 	<style>
-	
+
 	*{
-		-webkit-box-sizing: border-box; 
-		-moz-box-sizing: border-box;   
-		box-sizing: border-box;     
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 
 	html{
@@ -28,7 +28,7 @@
         overflow-y: scroll;
         padding: 0 2em;
 	}
-        
+
      h1, h2, h3, h4, h5{
            font-weight: 300;
      }
@@ -37,22 +37,22 @@
 	   color: #2c3e50;
 	   text-decoration: none;
      }
-     
+
      .container:before{
      	content: '';
 		height: 100%;
-		width: 100%;	     
+		width: 100%;
 		position: absolute;
 		background: black;
 		display: block;
 		opacity: 0;
      }
-     
+
      .container:hover:before{
 	    opacity: 0.5;
 		 z-index: 10;
      }
-     
+
 	 .container{
 	     position: relative;
 	     overflow: hidden;
@@ -60,20 +60,20 @@
 	     float: left;
      }
      .container img, .container .text, .container:before{
-	   
+
 	  -webkit-transition: all 0.1s linear;
 	  transition: all 0.1s linear;
      }
-     
+
      .container.blur:hover img{
-	     filter: blur(2px); 
+	     filter: blur(2px);
 	     -webkit-filter: blur(2px);
      }
-     
+
      .container:hover .text{
 	     opacity: 1;
      }
-     
+
       .container .text{
 	      position: absolute;
 	      z-index: 11;
@@ -82,25 +82,25 @@
 	      opacity: 0;
 		  font-weight: 300;
       }
-      
+
       h1{
-      	
+
       	margin-left: 1em;
       }
-                
+
       h2{
-	    
+
 	     display: inline;
     	  margin-left: 8em;
       }
-      
+
       .clear{
 	      clear: both;
       }
 
 
 	 .back-to-article{
-		 clear: both;	
+		 clear: both;
 		 text-align: center;
 
 	 }
@@ -112,8 +112,8 @@
 
 	<h2>Left Cat: <strong>blur(2px)</strong></h2>
 	<h2>Right Cat: <strong>no blur</strong></h2>
-	
-	<div class="clear"></div>	
+
+	<div class="clear"></div>
 
 	<div class="container blur">
 		<img src="http://php.quicoto.com/wp-content/uploads/2014/02/kitten-placeholder.jpeg" alt="kitten-placeholder" />
@@ -123,7 +123,7 @@
 			<em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </em>
 		</div>
 	</div>
-	
+
 	<div class="container">
 		<img src="http://php.quicoto.com/wp-content/uploads/2014/02/kitten-placeholder.jpeg" alt="kitten-placeholder" />
 		<div class="text">
@@ -133,10 +133,10 @@
 		</div>
 	</div>
 
-	
+
 	<div class="back-to-article">
-		<a href="/add-css-blur-less-mixin/">&larr; Back to the article</a>
+		<a href="http://php.quicoto.com/add-css-blur-less-mixin/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/31">Fork me on Github</a>
 	</div>
-	
+
 </body>
 </html>
