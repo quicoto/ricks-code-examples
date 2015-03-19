@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Random Password - Rick's Code</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+
+    <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <style>
+
+       *{
+    		-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+    		box-sizing: border-box;
+
+        text-align: center;
+    	}
+
+
+    	::selection {
+    		background: #3498db;
+    		color: white;
+    		text-shadow: none;
+    	}
+
+
+    	html{
+    		font-size:16px;
+    	}
+    	body{
+    		font-size: 1rem;
+    		font-weight: 300;
+    		font-family: 'Open Sans', sans-serif;
+    	    background: #3498db;
+    	    color: white;
+            overflow-y: scroll;
+    	}
+
+         h1, h2, h3, h4, h5{
+               font-weight: 300;
+         }
+
+         a{
+    	    color: #2c3e50;
+         }
+
+    </style>
+</head>
+<body >
+    <div style="margin:auto auto; width:550px; font-size:25px;">
+        <h1 id="pass"></h1>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script>
+    function GeneratePassword(lengthOfPassword) {
+        var theLetters = "abcdefghijklmnopqrstuvwxyz";
+        var StrongPasswordArray = [];
+        var capitalise;
+        for (var i = 0; i < lengthOfPassword; i++) {
+            capitalise = Math.round(Math.random() * 1);
+            if (capitalise === 0) {
+                StrongPasswordArray[i] = theLetters.charAt(Math.round(Math.random() * 25)).toUpperCase();
+            }
+            else {
+                StrongPasswordArray[i] = theLetters.charAt(Math.round(Math.random() * 25));
+            }
+        }
+        var numberOfDigits;
+        numberOfDigits = Math.round(Math.random() * (lengthOfPassword - 1)) + 1;
+        var positionForNumeric, theNumber;
+        for (i = 0; i < numberOfDigits; i++) {
+            positionForNumeric = Math.round(Math.random() * (lengthOfPassword - 1));
+            theNumber = Math.round(Math.random() * 9);
+            StrongPasswordArray[positionForNumeric] = theNumber;
+        }
+
+        return StrongPasswordArray;
+    }
+
+
+    $(document).ready(function() {
+        var pass = GeneratePassword(15);
+        $('#pass').html(pass);
+
+    });
+
+        </script>
+
+
+        <p>
+        	<a href="http://php.quicoto.com/how-to-generate-random-password-with-javascript/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/33">Fork me on Github</a>
+        </p>
+
+</body>
+</html>
