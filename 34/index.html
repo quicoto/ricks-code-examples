@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>CSS Menu with full width of parent container - Rick's Code</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+
+    <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <style>
+
+      /* Global Styles, not needed */
+       *{
+    		-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+    		box-sizing: border-box;
+
+        text-align: center;
+    	}
+
+
+    	::selection {
+    		background: #2ecc71;
+    		color: white;
+    		text-shadow: none;
+    	}
+
+
+    	html{
+    		font-size:16px;
+    	}
+    	body{
+    		font-size: 1rem;
+    		font-weight: 300;
+    		font-family: 'Open Sans', sans-serif;
+    	    background: #2ecc71;
+    	    color: white;
+            overflow-y: scroll;
+    	}
+
+       h1, h2, h3, h4, h5{
+             font-weight: 300;
+       }
+
+       a{
+  	    color: white;
+       }
+       nav{
+         margin-bottom: 20px;
+       }
+       nav li{
+         padding: 10px 20px;
+         background: #27ae60;
+       }
+       nav li:hover {
+         background: #1d7f41;
+       }
+
+       #nav2{
+         width: 400px;
+       }
+
+       #nav3{
+         width: 650px;
+       }
+       /* END Global Styles, not needed */
+
+       /* Actual Example CSS */
+       nav {
+            display: table;
+            border-collapse: collapse;
+        }
+
+        nav ul {
+            display: table-row;
+        }
+
+        nav ul li {
+            display: table-cell;
+        }
+        /* END example CSS*/
+
+    </style>
+</head>
+<body>
+
+  <nav id="nav1">
+    <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+    </ul>
+  </nav>
+
+  <nav id="nav2">
+    <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+    </ul>
+  </nav>
+
+  <nav id="nav3">
+    <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+    </ul>
+  </nav>
+
+<p>
+  <a href="http://php.quicoto.com/css-menu-with-full-width-of-parent-container/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/34">Fork me on Github</a>
+</p>
+
+</body>
+</html>
