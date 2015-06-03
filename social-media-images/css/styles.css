@@ -1,0 +1,70 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #2ecc71;
+    color: white;
+    text-shadow: none;
+}
+
+
+html{
+    font-size:10px;
+}
+body{
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    background: #2ecc71;
+    color: white;
+    overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: 300;
+}
+
+a{
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+input {
+    color: #2c3e50;
+}
+
+
+.image,
+.frame,
+.text {
+    position: absolute;
+}
+
+.image {
+    width: 1064px;
+    z-index: 1;
+}
+
+.frame {
+    width: 1064px; /* 1024 + border */
+    height: 562px; /* 512 + border */
+    border: 20px solid rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
+
+.text {
+    text-shadow: .04em .04em 0 #9cb8b3;
+    font: 600 1.5em/1 'Raleway', sans-serif;
+    color: #efedce;
+    font-size: 8rem;
+    z-index: 3;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
