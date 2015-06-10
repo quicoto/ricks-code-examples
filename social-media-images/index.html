@@ -2,50 +2,84 @@
 <html ng-app="">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-     <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Twitter Image Generator</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
-</style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="js/scripts.js"></script>
+	<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Twitter Image Generator - Rick's Code</title>
+
+	<!-- Compiled and minified CSS -->
+	<!-- More Here: http://materializecss.com/ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+	<link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$(".button-collapse").sideNav();
+		});
+	</script>
+
 </head>
 <body>
 
-    <header class="container">
-        <div class="col-md-6">
+	<header>
+        <nav>
+            <div class="nav-wrapper blue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <a href="#" class="brand-logo">Twitter Image Generator</a>
+							<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                <li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/social-media-images"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
+                            </ul>
+							<ul class="side-nav" id="mobile-demo">
+								<li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/social-media-images"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
+							</ul>
+                         </div> <!-- .col s12 -->
+                    </div> <!-- .row -->
+                 </div> <!-- .container -->
+            </div> <!-- .nav-wrapper -->
+        </nav>
+	</header>
 
-            <h1>Twitter Image Generator</h1>
+	<main class="blue lighten-2">
 
-            <p>
-                <input class="form-control" type="text" name="url" value="" ng-model="url" ng-init="url='http://www.quicoto.com/wp-content/uploads/2015/05/Kinkaku-ji-de-Kyoto1.jpg'">
-            </p>
-            <p>
-                <input class="form-control" type="text" name="text" value="" ng-model="text" ng-init="text='Quicoto Blog'">
-            </p>
-        </div>
+		<section class="container">
+			<article>
+				<p>
+					<input class="blue-text text-lighten-5" type="text" name="url" value="" ng-model="url" ng-init="url='http://www.quicoto.com/wp-content/uploads/2015/05/Kinkaku-ji-de-Kyoto1.jpg'">
+				</p>
+				<p>
+					<input class="blue-text text-lighten-5" type="text" name="text" value="" ng-model="text" ng-init="text='Quicoto Blog'">
+				</p>
+			</article>
+		</section>
 
-    </header>
+		<section class="container">
+			<span class="text draggable">{{text}}</span>
 
+			<div class="frame"></div>
 
-    <div class="container">
+			<img class="image draggable" src="{{url}}" alt="" />
+		</section>
+	</main>
 
-        <span class="text draggable">{{text}}</span>
-
-        <div class="frame"></div>
-
-        <img class="image draggable" src="{{url}}" alt="" />
-    </div>
-
-
-    <footer class="container">
-        <p>&copy; <a href="http://php.quicoto.com">Ricard Torres</a></p>
-    </footer>
+	<footer class="page-footer blue">
+		<div class="footer-copyright">
+			<div class="container">
+				<a class="grey-text text-lighten-3" href="http://php.quicoto.com/" target="_blank">Ricard Torres</a>
+			</div>
+		</div> <!-- .footer-copyright -->
+	</footer>
 
 </body>
 </html>
