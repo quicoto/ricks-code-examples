@@ -56,6 +56,22 @@ $(document).ready(function() {
 
 	</script>
 
+<style>
+	/* Fixed footer */
+	body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	}
+
+	main {
+	flex: 1 0 auto;
+	}
+
+	footer.page-footer {
+		margin-top: 0;
+	}
+</style>
 
 </head>
 <body>
@@ -83,13 +99,15 @@ $(document).ready(function() {
         </nav>
 	</header>
 
+	<main class="blue lighten-2">
 	<section class="container">
 		<article>
 			<header>
-				<h2 id="pass" class="center"></h2>
+				<h1 id="pass" class="center white-text"></h1>
 			</header>
 		</article>
 	</section>
+	</main>
 
 	<footer class="page-footer blue">
 		<div class="footer-copyright">
