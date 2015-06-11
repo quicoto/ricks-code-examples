@@ -17,7 +17,7 @@
 }
 
 .text {
-    text-shadow: .04em .04em 0 #9cb8b3;
+    text-shadow: .04em .04em 0 rgba(0, 0, 0, 0.37);
     font: 600 1.5em/1 'Raleway', sans-serif;
     color: #efedce;
     font-size: 4rem;
