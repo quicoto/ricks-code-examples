@@ -1,0 +1,20 @@
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   font-weight: 400;
+ }
+
+ main {
+   flex: 1 0 auto;
+   min-height: 60rem;
+   padding-top: 2rem;
+ }
+
+ footer.page-footer {
+     margin-top: 0;
+ }
+
+ul li {
+    padding: 10px;
+}
