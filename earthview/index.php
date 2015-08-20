@@ -37,6 +37,7 @@
 			<article>
                 <div class="row" id="mainrow">
 					<!-- Ajax content will go here -->
+					<h3>Loading...</h3>
 					<div class="progress">
 						<div class="indeterminate"></div>
 					</div>
