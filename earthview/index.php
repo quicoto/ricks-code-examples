@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
     <!-- Custom -->
     <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
+	<!-- Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,7 +19,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s12">
-                            <a href="#" class="brand-logo">Earthview Photo Downloader</a>
+                            <a href="." class="brand-logo">Earthview Photo Downloader</a>
 							<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
                                 <li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/earthview"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
@@ -37,21 +39,21 @@
 			<article>
                 <div class="row" id="mainrow">
 					<!-- Ajax content will go here -->
-					<h3>Loading...</h3>
-					<div class="progress">
-						<div class="indeterminate"></div>
-					</div>
-					<!-- .progress -->
                 </div>
 				<!-- .row -->
 			</article>
 		</section>
+
+		<div class="fixed-action-btn" style="bottom: 45px; right: 45px;">
+		   <a onclick="javascript: getPhotos();" class="btn-floating btn-large waves-effect waves-light right" title="More Photos"><i class="material-icons">replay</i></a>
+		 </div>
 	</main>
 
 	<footer class="page-footer teal">
 		<div class="footer-copyright">
 			<div class="container">
 				<a class="grey-text text-lighten-3" href="http://php.quicoto.com/" target="_blank">Ricard Torres</a>
+				<span class="right">Images from <a href="http://earthview.withgoogle.com/" class="white-text" target="_blank">earthview.withgoogle.com</a></span>
 			</div>
 		</div> <!-- .footer-copyright -->
 	</footer>

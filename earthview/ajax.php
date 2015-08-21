@@ -74,7 +74,7 @@ $number_of_wallpapers = 4;
                 </div>
                 <div class="card-content">
                     <span class="card-title black-text"><?=$name?></span>
-                    <p><?=$name?> <?=$result->mapsLink?></p>
+                    <p><a href="<?=$result->mapsLink?>" target="_blank"><?=$result->mapsLink?></a></p>
                 </div>
                 <div class="card-action">
                     <a download href="<?=$result->photoUrl?>" class="waves-effect waves-light btn white-text">Download Photo</a>
