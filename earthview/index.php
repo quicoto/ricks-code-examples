@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Earthview Photo Downloader - Rick's Code</title>
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/materialize.min.css" media="screen">
     <!-- Custom -->
-    <link rel="stylesheet" href="css/styles.css" media="screen">
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen">
 	<!-- Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -58,6 +58,6 @@
 		</div> <!-- .footer-copyright -->
 	</footer>
 
-	<script src="js/scripts.js"></script>
+	<script src="assets/js/scripts.js"></script>
 </body>
 </html>
