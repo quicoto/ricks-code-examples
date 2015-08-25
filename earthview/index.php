@@ -59,6 +59,9 @@
 		</div> <!-- .footer-copyright -->
 	</footer>
 
+	<!-- Compiled and minified JavaScript -->
+	<script src="assets/js/materialize.min.js"></script>
+	
 	<script src="assets/js/scripts.js"></script>
 </body>
 </html>
