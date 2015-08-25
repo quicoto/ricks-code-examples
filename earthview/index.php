@@ -26,6 +26,7 @@
                                 <li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/earthview"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
                             </ul>
 							<ul class="side-nav" id="mobile-demo">
+								<li><a href="http://php.quicoto.com/google-earthview-photo-downloader/"><i class="mdi-navigation-arrow-back left"></i> Back to Article</a></li>
 								<li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/earthview"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
 							</ul>
                          </div> <!-- .col s12 -->

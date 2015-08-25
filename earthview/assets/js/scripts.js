@@ -1,6 +1,11 @@
+// The damn mobile menu
+$(document).ready(function() {
+    $(".button-collapse").sideNav();
+});
+
 function getPhotos(){
     var row = document.getElementById('mainrow');
-    
+
     // Loading
     row.innerHTML = '<h3>Loading...</h3><div class="progress"><div class="indeterminate"></div></div><!-- .progress -->';
 
