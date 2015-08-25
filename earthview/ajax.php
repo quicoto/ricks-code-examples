@@ -67,7 +67,7 @@ $number_of_wallpapers = 4;
         }
 
         ?>
-        <div class="col s6">
+        <div class="col s12 m6">
             <div class="card">
                 <div class="card-image">
                     <img src="<?=$result->thumbUrl?>" alt="<?=$name?>" title="<?=$name?>" />
