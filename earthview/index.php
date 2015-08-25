@@ -19,7 +19,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s12">
-                            <a href="." class="brand-logo">Earthview Photo Downloader</a>
+                            <a href="." class="brand-logo hide-on-small-only">Earthview Photo Downloader</a>
+							<a href="." class="brand-logo hide-on-med-and-up">Earthview</a>
 							<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
                                 <li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/earthview"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
