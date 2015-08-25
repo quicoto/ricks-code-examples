@@ -10,7 +10,7 @@
 	<!-- More Here: http://materializecss.com/ -->
 	<link rel="stylesheet" href="assets/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	
+
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -48,11 +48,14 @@ function GeneratePassword(lengthOfPassword) {
 	return StrongPasswordArray;
 }
 
-
-$(document).ready(function() {
+function newPassword(){
 	var pass = GeneratePassword(15);
 	$('#pass').html(pass);
+}
 
+
+$(document).ready(function() {
+	newPassword();
 });
 
 	</script>
@@ -72,6 +75,17 @@ $(document).ready(function() {
 	footer.page-footer {
 		margin-top: 0;
 	}
+
+	#pass {
+		font-size: 30px;
+	}
+
+	@media screen and (min-width: 768px) {
+	    #pass {
+	        font-size: 50px;
+	    }
+	}
+
 </style>
 
 </head>
@@ -83,7 +97,8 @@ $(document).ready(function() {
                 <div class="container">
                     <div class="row">
                         <div class="col s12">
-                            <a href="#" class="brand-logo">JS Password Generator</a>
+							<a href="." class="brand-logo hide-on-small-only">JS Password Generator</a>
+							<a href="." class="brand-logo hide-on-med-and-up">Pass Generator</a>
 							<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
                                 <li><a href="http://php.quicoto.com/how-to-generate-random-password-with-javascript/"><i class="mdi-navigation-arrow-back left"></i> Back to Article</a></li>
@@ -109,6 +124,10 @@ $(document).ready(function() {
 		</article>
 	</section>
 	</main>
+
+	<div class="fixed-action-btn" style="bottom: 85px; right: 45px;">
+	   <a onclick="javascript: newPassword();" class="btn-floating btn-large waves-effect waves-light right blue" title="More Photos"><i class="material-icons">replay</i></a>
+	 </div>
 
 	<footer class="page-footer blue">
 		<div class="footer-copyright">
