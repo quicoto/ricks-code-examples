@@ -9,6 +9,7 @@
 	<!-- Compiled and minified CSS -->
 	<!-- More Here: http://materializecss.com/ -->
 	<link rel="stylesheet" href="assets/css/materialize.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- jQuery -->
@@ -24,16 +25,16 @@
 
 	<script>
 function GeneratePassword(lengthOfPassword) {
-	var theLetters = "abcdefghijklmnopqrstuvwxyz";
+	var theLetters = "abcdefghijklmnopqrstuvwxyz!@$&/()_-=?<>";
 	var StrongPasswordArray = [];
 	var capitalise;
 	for (var i = 0; i < lengthOfPassword; i++) {
 		capitalise = Math.round(Math.random() * 1);
 		if (capitalise === 0) {
-			StrongPasswordArray[i] = theLetters.charAt(Math.round(Math.random() * 25)).toUpperCase();
+			StrongPasswordArray[i] = theLetters.charAt(Math.round(Math.random() * 40)).toUpperCase();
 		}
 		else {
-			StrongPasswordArray[i] = theLetters.charAt(Math.round(Math.random() * 25));
+			StrongPasswordArray[i] = theLetters.charAt(Math.round(Math.random() * 35));
 		}
 	}
 	var numberOfDigits;
@@ -42,7 +43,7 @@ function GeneratePassword(lengthOfPassword) {
 	for (i = 0; i < numberOfDigits; i++) {
 		positionForNumeric = Math.round(Math.random() * (lengthOfPassword - 1));
 		theNumber = Math.round(Math.random() * 9);
-		StrongPasswordArray[positionForNumeric] = theNumber;
+		StrongPasswordArray[positionForNumeric] = theNumber	;
 	}
 
 	return StrongPasswordArray;
