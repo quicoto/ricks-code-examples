@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/styles.css" media="screen">
 	<!-- Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<meta name="theme-color" content="#009688">
 </head>
 <body>
     <header>
