@@ -1,0 +1,23 @@
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   font-weight: 400;
+ }
+
+ main {
+   flex: 1 0 auto;
+   height: 60rem;
+ }
+
+ footer.page-footer {
+     margin-top: 0;
+ }
+
+ul li {
+    padding: 10px;
+}
+
+#loadedImage {
+    display: none;
+}
