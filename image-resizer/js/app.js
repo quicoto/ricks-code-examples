@@ -26,7 +26,7 @@ angular.module('resizeImagesApp', [])
                 url = url.replace('https://','').replace('http://','');
 
                 // Photon Jetpack URL (server 1 or 0)
-                $scope.resizedImage = "http://i" + Math.round(Math.random()) +  ".wp.com/" + url + "?resize=" + width + "," + height;
+                $scope.resizedImage = "http://i" + Math.round(Math.random()) +  ".wp.com/" + url + "?strip=all&resize=" + width + "," + height;
 
         };// END resizeImage function
 
