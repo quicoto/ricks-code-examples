@@ -43,14 +43,14 @@
 			<article>
                 <div class="row">
 					<form class="col s12">
-						<div class="input-field col s3">
+						<div class="input-field col s12 m8 l4">
 							<input type="text" ng-model="url" id="ban-input" size="30" placeholder="URL" autofocus="">
 							<input type="number" ng-model="width" id="ban-input" size="30" placeholder="Width">
 							<input type="number" ng-model="height" id="ban-input" size="30" placeholder="Height">
 							<input class="waves-effect waves-light btn teal" type="submit" value="Resize" ng-click="resizeImage()">
 						</div>
 						<!-- .s3 -->
-						<div class="input-field col s12">
+						<div class="input-field col s12 m8 l4">
 							<!-- Image goes Here -->
 							<div id="progress"></div>
 							<img class="responsive-img" ng-src="{{resizedImage}}" alt="" id="loadedImage">
