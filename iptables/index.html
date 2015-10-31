@@ -50,8 +50,29 @@
 							iptables-restore < /etc/iptables.firewall.rules
 						</li>
 						<li>
-							<strong>Range:</strong><br>
-							-A INPUT -m iprange --src-range 10.0.0.1-10.0.0.16 -j ACCEPT
+							<h4>Range Block</h4>
+
+							<p>
+								<strong>To block 116.10.191.* addresses:</strong>
+							</p>
+							<p>
+								-A INPUT -s 116.10.191.0/24 -j DROP
+							</p>
+
+							<p>
+								<strong>To block 116.10.. addresses:</strong>
+							</p>
+
+							<p>
+								-A INPUT -s 116.10.0.0/16 -j DROP
+							</p>
+
+							<p>
+								<strong>To block 116...* addresses:</strong>
+							</p>
+							<p>
+								-A INPUT -s 116.0.0.0/8 -j DROP
+							</p>
 						</li>
 					</ul>
 				</div>
