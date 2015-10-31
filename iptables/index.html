@@ -49,6 +49,10 @@
 						<li>
 							iptables-restore < /etc/iptables.firewall.rules
 						</li>
+						<li>
+							<strong>Range:</strong><br>
+							-A INPUT -p tcp --destination-port 22 -m iprange --src-range 192.168.1.100-192.168.1.200 -j ACCEPT
+						</li>
 					</ul>
 				</div>
 				<!-- .row -->
