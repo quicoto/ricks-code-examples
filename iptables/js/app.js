@@ -6,4 +6,9 @@ angular.module('iptablesApp', [])
             $scope.ip = '';
             document.getElementById("ban-input").focus();
         };
+        $scope.cleanBan = function() {
+            $scope.bans = []
+            $scope.ip = '';
+            document.getElementById("ban-input").focus();
+        };
     });
