@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Example 37 - Rick's Code</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <style>
+      /* Global Styles, not needed */
+      ::selection,body{color:#fff;background:#2ecc71}body,h1,h2,h3,h4,h5{font-weight:300}a,body{color:#fff}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-align:center}::selection{text-shadow:none}html{font-size:16px}body{font-size:1rem;font-family:'Open Sans',sans-serif;overflow-y:scroll}nav{margin-bottom:20px}nav li{padding:10px 20px;background:#27ae60}nav li:hover{background:#1d7f41}#nav2{width:400px}#nav3{width:650px}
+       /* END Global Styles, not needed */
+    </style>
+
+
+    <style>
+    .container {
+      width: 100%;
+      height: 500px;
+      position: relative;
+    }
+
+    .container .other-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      padding: 30px;
+      font-size: 50px;
+      color: white;
+    }
+
+    .container .slide {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transition: opacity 1s ease-in-out;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0;
+    }
+
+    .container .slide.show {
+      opacity: 1;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    	<div class="other-content">We could have anything here</div>
+
+    	<div class="slide show" style="background-image: url('images/image-1.jpeg');"></div>
+    	<div class="slide" style="background-image: url('images/image-2.jpeg');"></div>
+    	<div class="slide" style="background-image: url('images/image-3.jpeg');"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script>
+
+    function cycleBackgrounds() {
+    	var index = 0;
+
+    	$imageEls = $('.container .slide'); // Get the images to be cycled.
+
+    	setInterval(function () {
+    		// Get the next index.  If at end, restart to the beginning.
+    		index = index + 1 < $imageEls.length ? index + 1 : 0;
+    		// Show the next image.
+    		$imageEls.eq(index).addClass('show');
+    		// Hide the previous image.
+    		$imageEls.eq(index - 1).removeClass('show');
+
+    	}, 2000);
+    };
+
+    // Document Ready.
+    $(function () {
+    	cycleBackgrounds();
+    });
+
+    </script>
+
+    <div class="back-to-article">
+      <p>
+          <a href="http://php.quicoto.com/easy-background-image-slideshow/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/37">Fork me on Github</a>
+      </p>
+    </div>
+
+</body>
+</html>
