@@ -83,9 +83,9 @@ function generatePassword($length=9, $strength=0) {
 ?>
 
 <h1 style="padding:20px;"><?=generatePassword(9,8)?></h1>
-   
+
    <p>
-   	<a href="http://php.quicoto.com/php-random-password-generator/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/19">Fork me on Github</a>
+   	<a href="https://php.quicoto.com/php-random-password-generator/">Back to the Article</a> | <a href="https://github.com/quicoto/ricks-code-examples/tree/master/19">Fork me on Github</a>
    </p>
 </body>
 </html>
