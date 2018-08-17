@@ -14,17 +14,6 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-	<!-- Compiled and minified JavaScript -->
-	<script src="assets/js/materialize.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$(".button-collapse").sideNav();
-		});
-	</script>
-
 	<script>
 function GeneratePassword(lengthOfPassword) {
 	var theLetters = "abcdefghijklmnopqrstuvwxyz!@$&/()_-=?<>";
@@ -48,48 +37,15 @@ function GeneratePassword(lengthOfPassword) {
 		StrongPasswordArray[positionForNumeric] = theNumber;
 	}
 
-	return StrongPasswordArray;
+	return StrongPasswordArray.join('');
 }
+
 
 function newPassword(){
-	var pass = GeneratePassword(17);
-	$('#pass').html(pass);
+	var $password = document.getElementById('pass');
+	$password.innerText = GeneratePassword(17);
 }
-
-
-$(document).ready(function() {
-	newPassword();
-});
-
-	</script>
-
-<style>
-	/* Fixed footer */
-	body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	}
-
-	main {
-	flex: 1 0 auto;
-	}
-
-	footer.page-footer {
-		margin-top: 0;
-	}
-
-	#pass {
-		font-size: 30px;
-	}
-
-	@media screen and (min-width: 768px) {
-	    #pass {
-	        font-size: 50px;
-	    }
-	}
-
-</style>
+</script>
 
 </head>
 <body>
@@ -104,11 +60,11 @@ $(document).ready(function() {
 							<a href="." class="brand-logo hide-on-med-and-up">Pass Generator</a>
 							<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                <li><a href="http://php.quicoto.com/how-to-generate-random-password-with-javascript/"><i class="mdi-navigation-arrow-back left"></i> Back to Article</a></li>
-                                <li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/33"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
+                                <li><a href="https://php.quicoto.com/how-to-generate-random-password-with-javascript/"><i class="mdi-navigation-arrow-back left"></i> Back to Article</a></li>
+                                <li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/33"><i class="mdi-content-link left"></i>Github</a></li>
                             </ul>
 							<ul class="side-nav" id="mobile-demo">
-								<li><a href="http://php.quicoto.com/how-to-generate-random-password-with-javascript/"><i class="mdi-navigation-arrow-back left"></i> Back to Article</a></li>
+								<li><a href="https://php.quicoto.com/how-to-generate-random-password-with-javascript/"><i class="mdi-navigation-arrow-back left"></i> Back to Article</a></li>
 								<li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/33"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
 							</ul>
                          </div> <!-- .col s12 -->
@@ -138,10 +94,14 @@ $(document).ready(function() {
 	<footer class="page-footer blue">
 		<div class="footer-copyright">
 			<div class="container">
-				<a class="grey-text text-lighten-3" href="http://php.quicoto.com/" target="_blank">Ricard Torres</a>
+				<a class="grey-text text-lighten-3" href="https://php.quicoto.com/" target="_blank">Ricard Torres</a>
 			</div>
 		</div> <!-- .footer-copyright -->
 	</footer>
+
+	<script>
+		newPassword();
+	</script>
 
 </body>
 </html>

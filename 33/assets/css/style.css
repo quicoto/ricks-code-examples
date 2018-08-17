@@ -3,3 +3,28 @@
 	color: white;
 	text-shadow: none;
 }
+
+	/* Fixed footer */
+	body {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+	}
+
+	main {
+		flex: 1 0 auto;
+	}
+
+	footer.page-footer {
+		margin-top: 0;
+	}
+
+	#pass {
+		font-size: 30px;
+	}
+
+	@media screen and (min-width: 768px) {
+	    #pass {
+	        font-size: 50px;
+	    }
+	}
