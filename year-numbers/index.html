@@ -1,1 +1,78 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Year Numbers | Rick's Code</title>
+  <meta name='robots' content='noindex,follow'/>
+  <meta name="theme-color" content="#e74c3c">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=PT+Sans:700|Pacifico|Changa+One);
+    body {
+      background: #ffffff url(groovepaper.png) repeat;
+      color: #000000;
+    }
+
+    .container {
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      position: relative;
+      margin: 80px auto;
+      width: 600px;
+      font-size: 60px;
+      text-align: center;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+      opacity: 0.8;
+    }
+
+    span {
+      display: block;
+    }
+
+    .line-2 {
+      font-family: "Changa One", sans-serif;
+      color: #e74c3c;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 90px;
+      letter-spacing: 15px;
+      margin: 0 0;
+    }
+
+    .line-3 {
+      margin-top: 40px;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <span class="line-1">Current Week</span>
+      <span class="line-2 week-of-the-year"></span>
+    <div class="line-3">Day of the Year</div>
+    <div class="line-2 day-of-the-year"></div>
+  </div>
+
+  <script>
+    Date.prototype.getWeekNumber = function(){
+      var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+      var dayNum = d.getUTCDay() || 7;
+      d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+      var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+      return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
+    };
+
+    document.querySelector('.week-of-the-year').innerText = new Date().getWeekNumber();
+
+    Date.prototype.getDOY = function() {
+      var onejan = new Date(this.getFullYear(),0,1);
+      return Math.ceil((this - onejan) / 86400000);
+    }
+    var today = new Date();
+    var daynum = today.getDOY();
+
+    document.querySelector('.day-of-the-year').innerText = daynum;
+  </script>
+</body>
+</html>
