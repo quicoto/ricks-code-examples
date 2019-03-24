@@ -21,6 +21,7 @@
 
 	#pass {
 		font-size: 30px;
+		    word-break: break-all;
 	}
 
 	@media screen and (min-width: 768px) {
