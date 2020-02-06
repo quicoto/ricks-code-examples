@@ -1,4 +1,4 @@
- <script src="http://static.ak.connect.facebook.com/connect.php/es_ES" type="text/javascript"></script>
+ <script src="https://static.ak.connect.facebook.com/connect.php/es_ES" type="text/javascript"></script>
  <script type="text/javascript">FB.init("422f5e9b62c226c9117cbec482741cf2");</script>
 <div style="width: 100%" align="center"><?
 include "api/facebook.php";

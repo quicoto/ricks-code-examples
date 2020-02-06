@@ -57,7 +57,7 @@
 		<div class="footer-copyright">
 			<div class="container">
 				<a class="grey-text text-lighten-3" href="https://php.quicoto.com/" target="_blank">Ricard Torres</a>
-				<span class="right">Images from <a href="http://earthview.withgoogle.com/" class="white-text" target="_blank">earthview.withgoogle.com</a></span>
+				<span class="right">Images from <a href="https://earthview.withgoogle.com/" class="white-text" target="_blank">earthview.withgoogle.com</a></span>
 			</div>
 		</div> <!-- .footer-copyright -->
 	</footer>

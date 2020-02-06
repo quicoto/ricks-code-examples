@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>Example 19 | Rick's code</title>
-<link rel="author" href="http://google.com/+RicardTorres"/>
+<link rel="author" href="https://google.com/+RicardTorres"/>
 <meta charset="utf-8">
 
 <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->

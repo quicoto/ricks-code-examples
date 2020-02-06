@@ -21,7 +21,7 @@ $number_of_wallpapers = 4;
     for ($i = 0; $i < $number_of_wallpapers; $i++) {
 
         // Create DOM from URL or file
-        $url = 'http://earthview.withgoogle.com';
+        $url = 'https://earthview.withgoogle.com';
         if(isset($next_url)){
             $url .= $next_url;
         }
