@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Earthview Photo Downloader - Rick's Code</title>
+	<title>Earthview Photo Downloader - Ricard Torres Code</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/materialize.min.css" media="screen">
     <!-- Custom -->

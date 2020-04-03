@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Example 19 | Rick's code</title>
+<title>Example 19 | Ricard Torres Code</title>
 <link rel="author" href="https://google.com/+RicardTorres"/>
 <meta charset="utf-8">
 

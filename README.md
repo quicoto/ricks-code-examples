@@ -1,4 +1,4 @@
-# Examples from Rick's Code
+# Examples from Ricard Torres Code
 
 Check them out here: https://php.quicoto.com/
 
