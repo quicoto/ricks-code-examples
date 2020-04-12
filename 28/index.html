@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="author" href="https://google.com/+RicardTorres"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Example 28 - Ricard Torres Code</title>
 	<style>
@@ -39,16 +38,20 @@
 
 <form action="">
 	<p>Try using: ' / ? ¿ @ # & %</p>
-	<p><input type="text" placeholder="enter special chars..." /></p>
+	<p><input class="my-input" type="text" placeholder="enter special chars..." /></p>
 </form>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 <script>
-$(document).ready(function () {
-    $('input').keyup(function() {
-        var $th = $(this);
-        $th.val( $th.val().replace(/[^a-zA-Z0-9]/g, function(){ return ''; }) );
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  $input = document.querySelector('.my-input');
+
+  if ($input) {
+    $input.addEventListener('keyup', () => {
+      console.log('asd')
+      $input.value = $input.value.replace(/[^a-zA-Z0-9]/g, '');
+    })
+  }
 });
 </script>
 
