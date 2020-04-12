@@ -13,7 +13,6 @@
        /* END Global Styles, not needed */
     </style>
 
-
     <style>
     .container {
       width: 100%;
@@ -50,7 +49,6 @@
     .container .slide.show {
       opacity: 1;
     }
-
     </style>
 </head>
 <body>
@@ -63,31 +61,33 @@
     	<div class="slide" style="background-image: url('images/image-3.jpeg');"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
     <script>
+      /**
+       * @param  {number} interval (in milliseconds)
+       */
+      function cycleBackgrounds(interval) {
+        let index = 0
 
-    function cycleBackgrounds() {
-    	var index = 0;
+        const $imageEls = document.querySelectorAll('.container .slide') // Get the images to be cycled.
 
-    	$imageEls = $('.container .slide'); // Get the images to be cycled.
+        setInterval(() => {
+          // Get the next index.  If at end, restart to the beginning.
+          index = index + 1 < $imageEls.length ? index + 1 : 0
 
-    	setInterval(function () {
-    		// Get the next index.  If at end, restart to the beginning.
-    		index = index + 1 < $imageEls.length ? index + 1 : 0;
-    		// Show the next image.
-    		$imageEls.eq(index).addClass('show');
-    		// Hide the previous image.
-    		$imageEls.eq(index - 1).removeClass('show');
+          // Show the next
+          $imageEls[index].classList.add('show')
 
-    	}, 2000);
-    };
+        // Find the previous.
+        const previous = index - 1 < 0 ? $imageEls.length - 1 : index - 1;
 
-    // Document Ready.
-    $(function () {
-    	cycleBackgrounds();
-    });
+          // Hide the previous
+          $imageEls[previous].classList.remove('show')
+        }, interval)
+      }
 
+      document.addEventListener("DOMContentLoaded", function() {
+        cycleBackgrounds(2000);
+      });
     </script>
 
     <div class="back-to-article">
