@@ -1,3 +1,3 @@
 ## Year Numbers
 
-https://php.quicoto.com/examples/year-numbers/
+https://ricard.dev/examples/year-numbers/

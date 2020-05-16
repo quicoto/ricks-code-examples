@@ -1,6 +1,6 @@
 # Examples from Ricard Torres Code
 
-Check them out here: https://php.quicoto.com/
+Check them out here: https://ricard.dev/
 
 MIT License
 ======

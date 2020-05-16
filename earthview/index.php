@@ -28,7 +28,7 @@
                                 <li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/earthview"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
                             </ul>
 							<ul class="side-nav" id="mobile-demo">
-								<li><a href="https://php.quicoto.com/google-earthview-photo-downloader/"><i class="mdi-navigation-arrow-back left"></i> Back to Article</a></li>
+								<li><a href="https://ricard.dev/google-earthview-photo-downloader/"><i class="mdi-navigation-arrow-back left"></i> Back to Article</a></li>
 								<li><a href="https://github.com/quicoto/ricks-code-examples/tree/master/earthview"><i class="mdi-content-link left"></i>Fork me on Github</a></li>
 							</ul>
                          </div> <!-- .col s12 -->
@@ -56,7 +56,7 @@
 	<footer class="page-footer teal">
 		<div class="footer-copyright">
 			<div class="container">
-				<a class="grey-text text-lighten-3" href="https://php.quicoto.com/" target="_blank">Ricard Torres</a>
+				<a class="grey-text text-lighten-3" href="https://ricard.dev/" target="_blank">Ricard Torres</a>
 				<span class="right">Images from <a href="https://earthview.withgoogle.com/" class="white-text" target="_blank">earthview.withgoogle.com</a></span>
 			</div>
 		</div> <!-- .footer-copyright -->
